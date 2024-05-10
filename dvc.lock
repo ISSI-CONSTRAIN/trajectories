@@ -1,0 +1,20 @@
+schema: '2.0'
+stages:
+  NAtl_925hPa_1hrLocalIntp_tozarr:
+    cmd: python src/load_traj.py
+    deps:
+    - path: data/incoming/NAtl_Trajectories_Mid_Start_925hPa_1hrLocalInterp
+      hash: md5
+      md5: 453adbe50e2d1e171370b6aa09b04386.dir
+      size: 1519004724
+      nfiles: 33
+    - path: src/load_traj.py
+      hash: md5
+      md5: 4c38c161bf665d2a031f62959b6e75bd
+      size: 1715
+    outs:
+    - path: data/converted/trajectory.zarr
+      hash: md5
+      md5: 4fdbb59143680d1dc44beb75a9729c8d.dir
+      size: 529955090
+      nfiles: 980

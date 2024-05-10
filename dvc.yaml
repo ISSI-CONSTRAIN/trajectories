@@ -1,7 +1,8 @@
 stages:
   NAtl_925hPa_1hrLocalIntp_tozarr:
-    cmd: src/load_traj.py
+    cmd: python src/load_traj.py
     deps:
-    - data/incoming
+    - data/incoming/NAtl_Trajectories_Mid_Start_925hPa_1hrLocalInterp
+    - src/load_traj.py
     outs:
     - data/converted/trajectory.zarr
