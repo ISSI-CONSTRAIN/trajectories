@@ -1,0 +1,13 @@
+md5: 9a2e5aa5028c000b5b4770f14e5adcde
+frozen: true
+deps:
+- md5: 12916d1646d1a1e5ee806b78cd37defc
+  size: 104196296
+  hash: md5
+  path: 
+    ssh://olympus.atmos.uw.edu:/home/disk/olympus/rmeast/trajectories2/ERA5_trajectory_program/consolidated_files/NAtl_Trajectories_Mid_Start_925hPa_1hrLocalInterp_2015.nc
+outs:
+- md5: 12916d1646d1a1e5ee806b78cd37defc
+  size: 104196296
+  hash: md5
+  path: NAtl_Trajectories_Mid_Start_925hPa_1hrLocalInterp_2015.nc
