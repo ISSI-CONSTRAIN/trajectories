@@ -15,7 +15,7 @@ stages:
     outs:
     - path: data/converted/trajectory.zarr
       hash: md5
-      md5: 1da6a3f82737f1e7147702390ca14b2f.dir
+      md5: 68a21375962340cd6e7abee8a56b777b.dir
       size: 654896235
       nfiles: 980
   NAtl_925hPa_1hrLocalIntp_upload:
@@ -23,10 +23,10 @@ stages:
     deps:
     - path: data/converted/trajectory.zarr
       hash: md5
-      md5: 1da6a3f82737f1e7147702390ca14b2f.dir
+      md5: 68a21375962340cd6e7abee8a56b777b.dir
       size: 654896235
       nfiles: 980
     - path: src/upload_swift.py
       hash: md5
-      md5: 1966772ae01c40eb158156681f2fc18c
+      md5: baa7e06059e14d31eb648db7e62b32d8
       size: 778
