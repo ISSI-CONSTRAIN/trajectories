@@ -6,3 +6,8 @@ stages:
     - src/load_traj.py
     outs:
     - data/converted/trajectory.zarr
+  NAtl_925hPa_1hrLocalIntp_upload:
+    cmd: python src/upload_swift.py
+    deps:
+    - data/converted/trajectory.zarr
+    - src/upload_swift.py

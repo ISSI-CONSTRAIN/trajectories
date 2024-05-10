@@ -18,3 +18,15 @@ stages:
       md5: 4fdbb59143680d1dc44beb75a9729c8d.dir
       size: 529955090
       nfiles: 980
+  NAtl_925hPa_1hrLocalIntp_upload:
+    cmd: python src/upload_swift.py
+    deps:
+    - path: data/converted/trajectory.zarr
+      hash: md5
+      md5: 4fdbb59143680d1dc44beb75a9729c8d.dir
+      size: 529955090
+      nfiles: 980
+    - path: src/upload_swift.py
+      hash: md5
+      md5: 1966772ae01c40eb158156681f2fc18c
+      size: 778
