@@ -15,6 +15,6 @@ async def get_client(**kwargs):
 ds = xr.open_zarr("data/converted/trajectory.zarr")
 
 try:
-    ds.to_zarr("swift://swift.dkrz.de/dkrz_a88749b4-3884-49bb-8c65-76571c660914/trajectories/NAtl_925hPa.zarr", storage_options={"get_client": get_client}, mode="w")
+    ds.to_zarr("swift://swift.dkrz.de/dkrz_a88749b4-3884-49bb-8c65-76571c660914/trajectories/NAtl_925hPa.zarr", storage_options={"get_client": get_client}, mode="a")
 except aiohttp.client_exceptions.ClientResponseError:
     print("Please check that OS_STORAGE_URL and OS_AUTH_TOKEN are set. Is the container already created?")

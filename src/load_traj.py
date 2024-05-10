@@ -12,7 +12,7 @@ def ydh_to_datetime(ds):
     days = ds['day_UTC'].values.flatten()
     hours = ds['hour_UTC'].values.flatten()
     datetime = pd.to_datetime(years * 1000 + days, format='%Y%j') + pd.to_timedelta(hours, unit='h')
-    return datetime.to_numpy().reshape(ds['year_UTC'].shape)
+    return datetime.to_numpy('<M8[ns]').reshape(ds['year_UTC'].shape)
 
 datasets = []
 for year in tqdm.trange(2007, 2023):
@@ -35,4 +35,4 @@ for year in tqdm.trange(2007, 2023):
 
 ds_out = xr.concat(datasets, dim='trajectory').transpose()
 
-ds_out.to_zarr('data/converted/trajectory.zarr', encoding={'time': {'units': "minutes since 1970-01-01 00:00:00"}})
+ds_out.to_zarr('data/converted/trajectory.zarr', encoding={'time': {'_FillValue':-999}})
